@@ -28,7 +28,7 @@ spec:
           value: "{{ .Values.solr.initialize.maxShardsPerNode }}"
         - name: CKAN_SOLR_INIT_CONFIGSETNAME
           value: "{{ .Values.solr.initialize.configsetName }}"
-        command: ["python"]
+        command: ["python3"]
         args: ["/srv/solr-init/solr-init.py"]
         volumeMounts:
         - name: solr-init-configmap
